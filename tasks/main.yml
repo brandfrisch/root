@@ -1,0 +1,28 @@
+---
+# tasks file for root
+
+- name: Set password for root
+  when: root_password is defined
+  user:
+    name: root
+    password: "{{ root_password }}"
+  tags:
+    - setup
+    - root
+
+- name: Does authorized keys exists
+  stat:
+    path: /root/.ssh/authorized_keys
+  register: authorized_keys
+  tags:
+    - setup
+    - root
+
+- name: Remove authorized keys
+  when: authorized_keys.stat.exists
+  file:
+    path: /root/.ssh/authorized_keys
+    state: absent
+  tags:
+    - setup
+    - root

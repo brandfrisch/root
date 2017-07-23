@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  vars:
+    root_password: '$6$rounds=656000$VOG0/GCibVf3zKIl$Z.as/IjEGEH9paCcL39hpa.QOe6sAhlEbVSKa0gDy0/mQTlqdSML.JifLo5RPbcXg4PHRTJZwGPWhDVbnPjGP.'
+
+  roles:
+    - role: root
