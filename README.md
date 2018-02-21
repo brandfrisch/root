@@ -1,4 +1,4 @@
-root [![Build Status](https://travis-ci.org/brandfrisch/root.svg?branch=master)](https://travis-ci.org/brandfrisch/root)
+root
 =========
 
 This is a rule to setup the root account on a unix system
