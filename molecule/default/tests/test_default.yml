@@ -1,0 +1,4 @@
+---
+file:
+  /root/.ssh/authorized_keys:
+    exists: false
